@@ -194,12 +194,3 @@ header {
     }
 }
 
-@media (max-width: 480px) {
-    #header img {
-        width: 50px; /* Zmenší logo */
-    }
-
-    .menu img {
-        width: 50px; /* Schová obrázky v menu */
-    }
-}
