@@ -172,3 +172,34 @@ header {
     }
 }
 
+@media (max-width: 768px) {
+    iframe {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16/9; /* zachová poměr stran */
+    }
+
+    .menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .content {
+        padding: 10px;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    #header img {
+        width: 50px; /* Zmenší logo */
+    }
+
+    .menu img {
+        width: 50px; /* Schová obrázky v menu */
+    }
+}
