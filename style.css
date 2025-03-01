@@ -7,6 +7,8 @@
 }
 
 
+
+
 .prvniStranka {
     display: grid;
     grid-template-rows: auto 1fr; /* Header nahoře, pod ním obsah */
@@ -192,5 +194,7 @@ header {
         max-width: 100%;
         height: auto;
     }
+    
+
 }
 

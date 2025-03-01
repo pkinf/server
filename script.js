@@ -50,9 +50,13 @@ window.onload = function() {
     let kveten1Hodiny = document.getElementById("kveten1Hodiny");
     let cerven1Hodiny = document.getElementById("cerven1Hodiny");
 
-    // REference na hodiny slozky
+    // REference na hodiny slozky (první ročník)
 
     let brezen1Prvni = document.getElementById("brezen1prvni");
+    
+    // Reference na hodiny solzky (druhý ročník)
+
+    let brezen2Prvni = document.getElementById("brezen2prvni");
 
 
   
@@ -337,6 +341,8 @@ window.onload = function() {
     let unor2TretiReseniOpen = document.getElementById("reseni2UnorTreti");
     let cancel = document.getElementById("unor2TretiCancel");
     let unor2Video = document.getElementById("unor2Video");
+
+    let brezen2PrvniReseni = document.getElementById("brezen2PrvniReseniButton");
     
     // Skrytí řešení a zrušení tlačítka při načtení stránky
     unor2TretiReseniOpen.style.display = "none";
@@ -358,6 +364,21 @@ window.onload = function() {
             unor2TretiReseni.style.display = "none";
         }
     });
+
+    brezen2PrvniReseni.addEventListener("click", function(){
+        if (brezen2PrvniReseniOpen.style.display === "grid") {
+            // Pokud je řešení již zobrazené, skryj ho
+            brezen2PrvniReseniOpen.style.display = "none";
+            cancel.style.display = "none";
+           
+        } else {
+            // Pokud není zobrazené, otevři ho
+            unor2TretiReseniOpen.style.display = "grid";
+            cancel.style.display = "grid";
+            unor2Video.style.display = "none";
+            unor2TretiReseni.style.display = "none";
+        }
+    })
     
     // Zrušení zobrazení řešení
     cancel.addEventListener("click", function() {
@@ -369,21 +390,37 @@ window.onload = function() {
 
 
 
-    // Reference na videa
+    // Reference na videa 1 Ročník
 
     
 
-    unor2_1Video = document.getElementById("unor2_1Video");
+
 
     brezen1_1Video = document.getElementById("brezen1_1Video");
     brezen1_1Video.style.display = "none";
+    
+    // Reference na videa 2 Ročník
+    
+    
+    brezen2_1Video = document.getElementById("brezen2_1Video");
+    brezen2_1Video.style.display = "none";
 
     // zobrazeni videa
 
+    videa = document.getElementById("videa");
+
     brezen1Prvni.addEventListener("click", function()
     {
+        brezen2_1Video.style.display = "none";
         brezen1_1Video.style.display = "grid";
-        unor2_1Video.style.display = "none";
+      
+    })
+
+    brezen2Prvni.addEventListener("click", function()
+    {
+        brezen2_1Video.style.display = "grid";
+        brezen1_1Video.style.display = "none";
+      
     })
 
 };
