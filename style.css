@@ -1,44 +1,36 @@
-
-
+/* Reset stylů */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-
-
-
 .prvniStranka {
     display: grid;
-    grid-template-rows: auto 1fr; /* Header nahoře, pod ním obsah */
-    height: 100vh; /* Zabírá celou výšku obrazovky */
+    grid-template-rows: auto 1fr;
+    height: 100vh;
 }
 
 header {
     width: 100%;
     display: grid;
-   grid-template-columns: 90% 10%;
+    grid-template-columns: 90% 10%;
     justify-content: center;
     align-items: center;
 }
 
-
 .content {
     display: grid;
-    grid-template-columns: 80% 20%; /* Levá část video (80%), pravá část menu (20%) */
+    grid-template-columns: 80% 20%;
     padding: 10px;
-    height: 100%; /* Vyplní zbývající prostor */
-    align-items:start; /* Zarovná obsah na střed vertikálně */
+    height: 100%;
+    align-items: start;
 }
 
 .viewport {
     display: flex;
     justify-content: center;
     align-items: center;
-
-
-    
 }
 
 .viewport iframe {
@@ -48,52 +40,64 @@ header {
     max-height: 1080px;
     aspect-ratio: 16 / 9;
     object-fit: cover;
-
-    
-   
 }
 
 .viewport img {
-    width: 100%; /* Video zabere celou šířku rodičovského prvku */
-    height: auto; /* Zachová poměr stran */
+    width: 100%;
+    height: auto;
 }
 
 .menu {
     display: flex;
     flex-direction: column;
     gap: 1vw;
-    justify-content: center; /* Složky budou vycentrované vertikálně */
-    align-items: center; /* Zarovná složky na střed */
+    justify-content: center;
+    align-items: center;
 }
 
 .menu img {
     height: 35px;
-}
-
-.menu img:hover{
     transition: transform 0.1s ease-in-out;
-    transform: scale(1.1); /* Zvětší obrázek o 25 % */
 }
 
-.eyeoff:hover {
-    transition: transform 0.1s ease-in-out;
-    transform: scale(1.1); /* Zvětší obrázek o 25 % */
-}
-
+.menu img:hover,
+.eyeoff:hover,
 .eyeon:hover {
-    transition: transform 0.1s ease-in-out;
-    transform: scale(1.1); /* Zvětší obrázek o 25 % */
+    transform: scale(1.1);
 }
-
 
 .zdroje {
-   display: flex;
-   flex-direction: row;
-  justify-content: start;
-  gap: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    gap: 10%;
 }
+/* Responzivita pro menší obrazovky */
+/* Responzivita pro menší obrazovky */
 
-@media (max-width: 1300px) {
+
+
+
+@media (max-width: 1200px) {
+    iframe {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16/9; /* zachová poměr stran */
+    }
+
+    .menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .content {
+        padding: 10px;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
     * {
         margin: 0;
         padding: 0;
@@ -173,28 +177,7 @@ header {
         gap: 10%;
     }
 }
-
-@media (max-width: 768px) {
-    iframe {
-        width: 100%;
-        height: auto;
-        aspect-ratio: 16/9; /* zachová poměr stran */
-    }
-
-    .menu {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .content {
-        padding: 10px;
-    }
-
-    img {
-        max-width: 100%;
-        height: auto;
-    }
     
 
-}
+
 

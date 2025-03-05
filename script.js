@@ -53,6 +53,7 @@ window.onload = function() {
     // REference na hodiny slozky (první ročník)
 
     let brezen1Prvni = document.getElementById("brezen1prvni");
+    let brezen1Druha = document.getElementById("brezen1druha");
   
     
     // Reference na hodiny solzky (druhý ročník)
@@ -399,6 +400,9 @@ window.onload = function() {
 
     brezen1_1Video = document.getElementById("brezen1_1Video");
     brezen1_1Video.style.display = "none";
+
+    brezen1_2Video = document.getElementById("brezen1_2Video");
+    brezen1_2Video.style.display = "none";
    
     
     
@@ -418,13 +422,23 @@ window.onload = function() {
     {
         brezen2_1Video.style.display = "none";
         brezen2_2Video.style.display = "none";
+        brezen1_2Video.style.display = "none";
         brezen1_1Video.style.display = "grid";
       
+    })
+
+    brezen1Druha.addEventListener("click", function(){
+        brezen2_1Video.style.display = "none";
+        brezen2_2Video.style.display = "none";
+        brezen1_1Video.style.display = "none";
+        brezen1_2Video.style.display = "grid";
+
     })
 
     brezen2Druha.addEventListener("click", function(){
         brezen2_1Video.style.display = "none";
         brezen1_1Video.style.display = "none";
+        brezen1_2Video.style.display = "none";
         brezen2_2Video.style.display = "grid";
     })
 
@@ -433,6 +447,7 @@ window.onload = function() {
         brezen2_1Video.style.display = "grid";
         brezen2_2Video.style.display = "none";
         brezen1_1Video.style.display = "none";
+        brezen1_2Video.style.display = "none";
 
       
     })
