@@ -53,11 +53,12 @@ window.onload = function() {
     // REference na hodiny slozky (první ročník)
 
     let brezen1Prvni = document.getElementById("brezen1prvni");
+  
     
     // Reference na hodiny solzky (druhý ročník)
 
     let brezen2Prvni = document.getElementById("brezen2prvni");
-
+    let brezen2Druha = document.getElementById("brezen2druha");
 
   
 
@@ -398,13 +399,17 @@ window.onload = function() {
 
     brezen1_1Video = document.getElementById("brezen1_1Video");
     brezen1_1Video.style.display = "none";
+   
+    
     
     // Reference na videa 2 Ročník
     
     
     brezen2_1Video = document.getElementById("brezen2_1Video");
     brezen2_1Video.style.display = "none";
-
+    
+    brezen2_2Video = document.getElementById("brezen2_2Video");
+    brezen2_2Video.style.display = "none";
     // zobrazeni videa
 
     videa = document.getElementById("videa");
@@ -412,15 +417,26 @@ window.onload = function() {
     brezen1Prvni.addEventListener("click", function()
     {
         brezen2_1Video.style.display = "none";
+        brezen2_2Video.style.display = "none";
         brezen1_1Video.style.display = "grid";
       
+    })
+
+    brezen2Druha.addEventListener("click", function(){
+        brezen2_1Video.style.display = "none";
+        brezen1_1Video.style.display = "none";
+        brezen2_2Video.style.display = "grid";
     })
 
     brezen2Prvni.addEventListener("click", function()
     {
         brezen2_1Video.style.display = "grid";
+        brezen2_2Video.style.display = "none";
         brezen1_1Video.style.display = "none";
+
       
     })
+
+    
 
 };
