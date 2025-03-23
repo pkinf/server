@@ -1,4 +1,43 @@
-/* Reset stylů */
+/* Tady začíná stylyování loading screenu */
+.loadingScreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);  /* Polotransparentní pozadí */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 2em;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    gap: 10%;
+  }
+
+  /* Styl pro celý spinner */
+  .spinner {
+    border: 8px solid #f3f3f3;  /* Světle šedý okraj */
+    border-top: 8px solid #3498db;  /* Modrý vršek */
+    border-radius: 50%;  /* Kolečko */
+    width: 50px;  /* Velikost kolečka */
+    height: 50px;  /* Velikost kolečka */
+    animation: spin 2s linear infinite;  /* Animace točení */
+  }
+
+  /* Definice animace pro točení */
+  @keyframes spin {
+    0% { transform: rotate(0deg); }  /* Začínáme na 0° */
+    100% { transform: rotate(360deg); }  /* Konec na 360° */
+  }
+  .prvniStranka {
+    visibility: hidden;
+}
+
+
+/* Tady začíná stylování stránky */
 * {
     margin: 0;
     padding: 0;

@@ -1,4 +1,10 @@
+let prvniStranka = document.getElementById("prvniStranka");
+let loadingScreen = document.getElementById("loadingScreen");
 window.onload = function() {
+    prvniStranka.style.visibility = "visible";
+    loadingScreen.remove();
+
+
     // Reference na elementy ročníky & měsíce
     let prvniRocnik = document.getElementById("prvniRocnik");
     let mesicePrvniRocnik = document.getElementById("mesicePrvniRocnik");
@@ -50,16 +56,21 @@ window.onload = function() {
     let kveten1Hodiny = document.getElementById("kveten1Hodiny");
     let cerven1Hodiny = document.getElementById("cerven1Hodiny");
 
-    // REference na hodiny slozky (první ročník)
+                                                    // REference na hodiny slozky (první ročník)
 
     let brezen1Prvni = document.getElementById("brezen1prvni");
     let brezen1Druha = document.getElementById("brezen1druha");
-  
+    let brezen1Treti = document.getElementById("brezen1treti");
+    
     
     // Reference na hodiny solzky (druhý ročník)
 
     let brezen2Prvni = document.getElementById("brezen2prvni");
     let brezen2Druha = document.getElementById("brezen2druha");
+    let brezen2Treti = document.getElementById("brezen2treti");
+
+    let duben2Prvni = document.getElementById("duben2prvni");
+    
 
   
 
@@ -403,6 +414,9 @@ window.onload = function() {
 
     brezen1_2Video = document.getElementById("brezen1_2Video");
     brezen1_2Video.style.display = "none";
+
+    brezen1_3Video = document.getElementById("brezen1_3Video");
+    brezen1_3Video.style.display = "none";
    
     
     
@@ -414,6 +428,12 @@ window.onload = function() {
     
     brezen2_2Video = document.getElementById("brezen2_2Video");
     brezen2_2Video.style.display = "none";
+
+    brezen2_3Video = document.getElementById("brezen2_3Video");
+    brezen2_3Video.style.display = "none";
+
+    duben2_1Video = document.getElementById("duben2_1Video");
+    duben2_1Video.style.display = "none";
     // zobrazeni videa
 
     videa = document.getElementById("videa");
@@ -424,6 +444,9 @@ window.onload = function() {
         brezen2_2Video.style.display = "none";
         brezen1_2Video.style.display = "none";
         brezen1_1Video.style.display = "grid";
+        brezen1_3Video.style.display = "none";
+        brezen2_3Video.style.display = "none";
+        duben2_1Video.style.display = "none";
       
     })
 
@@ -432,6 +455,9 @@ window.onload = function() {
         brezen2_2Video.style.display = "none";
         brezen1_1Video.style.display = "none";
         brezen1_2Video.style.display = "grid";
+        brezen1_3Video.style.display = "none";
+        brezen2_3Video.style.display = "none";
+        duben2_1Video.style.display = "none";
 
     })
 
@@ -440,6 +466,9 @@ window.onload = function() {
         brezen1_1Video.style.display = "none";
         brezen1_2Video.style.display = "none";
         brezen2_2Video.style.display = "grid";
+        brezen1_3Video.style.display = "none";
+        brezen2_3Video.style.display = "none";
+        duben2_1Video.style.display = "none";
     })
 
     brezen2Prvni.addEventListener("click", function()
@@ -448,8 +477,44 @@ window.onload = function() {
         brezen2_2Video.style.display = "none";
         brezen1_1Video.style.display = "none";
         brezen1_2Video.style.display = "none";
+        brezen1_3Video.style.display = "none";
+        brezen2_3Video.style.display = "none";
+        duben2_1Video.style.display = "none";
 
       
+    })
+
+    brezen1Treti.addEventListener("click", function() {
+       
+        brezen2_1Video.style.display = "none";
+        brezen2_2Video.style.display = "none";
+        brezen1_1Video.style.display = "none";
+        brezen1_2Video.style.display = "none";
+        brezen1_3Video.style.display = "grid";
+        brezen2_3Video.style.display = "none";
+        duben2_1Video.style.display = "none";
+        
+    })
+
+    brezen2Treti.addEventListener("click", function() {
+       
+        brezen2_1Video.style.display = "none";
+        brezen2_2Video.style.display = "none";
+        brezen1_1Video.style.display = "none";
+        brezen1_2Video.style.display = "none";
+        brezen1_3Video.style.display = "none";
+        brezen2_3Video.style.display = "grid";
+        duben2_1Video.style.display = "none";
+        
+    })
+
+    duben2Prvni.addEventListener("click", function(){
+        duben2_1Video.style.display = "grid";
+        brezen2_1Video.style.display = "none";
+        brezen2_2Video.style.display = "none";
+        brezen1_1Video.style.display = "none";
+        brezen1_2Video.style.display = "none";
+        brezen1_3Video.style.display = "none";
     })
 
     
