@@ -63,6 +63,8 @@ window.onload = function() {
     let brezen1Treti = document.getElementById("brezen1treti");
 
     let duben1Prvni = document.getElementById("duben1prvni");
+    let duben1Druha = document.getElementById("duben1druha");
+    let duben1Treti = document.getElementById("duben1treti");
     
     
     // Reference na hodiny solzky (druhý ročník)
@@ -72,6 +74,7 @@ window.onload = function() {
     let brezen2Treti = document.getElementById("brezen2treti");
 
     let duben2Prvni = document.getElementById("duben2prvni");
+    let duben2Druha = document.getElementById("duben2druha");
     
 
   
@@ -422,7 +425,12 @@ window.onload = function() {
 
     duben1_1Video = document.getElementById("duben1_1Video");
     duben1_1Video.style.display = "none";
+
+    duben1_2Video = document.getElementById("duben1_2Video");
+    duben1_2Video.style.display = "none";
    
+    duben1_3Video = document.getElementById("duben1_3Video");
+    duben1_3Video.style.display = "none";
     
     
     // Reference na videa 2 Ročník
@@ -439,6 +447,10 @@ window.onload = function() {
 
     duben2_1Video = document.getElementById("duben2_1Video");
     duben2_1Video.style.display = "none";
+
+    
+    duben2_2Video = document.getElementById("duben2_2Video");
+    duben2_2Video.style.display = "none";
     // zobrazeni videa
 
     videa = document.getElementById("videa");
@@ -453,6 +465,9 @@ window.onload = function() {
         brezen2_3Video.style.display = "none";
         duben2_1Video.style.display = "none";
         duben1_1Video.style.display = "none";
+        duben1_2Video.style.display = "none";
+        duben1_3Video.style.display = "none";
+        duben2_2Video.style.display = "none";
       
     })
 
@@ -465,6 +480,23 @@ window.onload = function() {
         brezen2_3Video.style.display = "none";
         duben2_1Video.style.display = "none";
         duben1_1Video.style.display = "none";
+        duben1_2Video.style.display = "none";
+        duben1_3Video.style.display = "none";
+        duben2_2Video.style.display = "none";
+
+    })
+    brezen1Treti.addEventListener("click", function(){
+        brezen2_1Video.style.display = "none";
+        brezen2_2Video.style.display = "none";
+        brezen1_1Video.style.display = "none";
+        brezen1_2Video.style.display = "none";
+        brezen1_3Video.style.display = "grid";
+        brezen2_3Video.style.display = "none";
+        duben2_1Video.style.display = "none";
+        duben1_1Video.style.display = "none";
+        duben1_2Video.style.display = "none";
+        duben1_3Video.style.display = "none";
+        duben2_2Video.style.display = "none";
 
     })
 
@@ -477,6 +509,40 @@ window.onload = function() {
         brezen2_3Video.style.display = "none";
         duben2_1Video.style.display = "none";
         duben1_1Video.style.display = "grid";
+        duben1_2Video.style.display = "none";
+        duben1_3Video.style.display = "none";
+        duben2_2Video.style.display = "none";
+        
+
+    })
+
+     duben1Druha.addEventListener("click", function(){
+        brezen2_1Video.style.display = "none";
+        brezen2_2Video.style.display = "none";
+        brezen1_1Video.style.display = "none";
+        brezen1_2Video.style.display = "none";
+        brezen1_3Video.style.display = "none";
+        brezen2_3Video.style.display = "none";
+        duben2_1Video.style.display = "none";
+        duben1_1Video.style.display = "none";
+        duben1_2Video.style.display = "grid";
+        duben1_3Video.style.display = "none";
+        duben2_2Video.style.display = "none";
+
+    })
+
+    duben1Treti.addEventListener("click", function(){
+        brezen2_1Video.style.display = "none";
+        brezen2_2Video.style.display = "none";
+        brezen1_1Video.style.display = "none";
+        brezen1_2Video.style.display = "none";
+        brezen1_3Video.style.display = "none";
+        brezen2_3Video.style.display = "none";
+        duben2_1Video.style.display = "none";
+        duben1_1Video.style.display = "none";
+        duben1_2Video.style.display = "none";
+        duben1_3Video.style.display = "grid";
+        duben2_2Video.style.display = "none";
 
     })
 
@@ -489,6 +555,22 @@ window.onload = function() {
         brezen2_3Video.style.display = "none";
         duben2_1Video.style.display = "none";
         duben1_1Video.style.display = "none";
+        duben1_2Video.style.display = "none";
+        duben1_3Video.style.display = "none";
+        duben2_2Video.style.display = "none";
+    })
+
+    brezen2Druha.addEventListener("click", function(){
+        brezen2_1Video.style.display = "none";
+        brezen1_1Video.style.display = "none";
+        brezen1_2Video.style.display = "none";
+        brezen2_2Video.style.display = "grid";
+        brezen1_3Video.style.display = "none";
+        brezen2_3Video.style.display = "none";
+        duben2_1Video.style.display = "none";
+        duben1_1Video.style.display = "none";
+        duben1_2Video.style.display = "none";
+        duben2_2Video.style.display = "none";
     })
 
     brezen2Prvni.addEventListener("click", function()
@@ -501,6 +583,9 @@ window.onload = function() {
         brezen2_3Video.style.display = "none";
         duben2_1Video.style.display = "none";
         duben1_1Video.style.display = "none";
+        duben1_2Video.style.display = "none";
+        duben1_3Video.style.display = "none";
+        duben2_2Video.style.display = "none";
 
       
     })
@@ -515,6 +600,9 @@ window.onload = function() {
         brezen2_3Video.style.display = "none";
         duben2_1Video.style.display = "none";
         duben1_1Video.style.display = "none";
+        duben1_2Video.style.display = "none";
+        duben1_3Video.style.display = "none";
+        duben2_2Video.style.display = "none";
         
     })
 
@@ -528,6 +616,9 @@ window.onload = function() {
         brezen2_3Video.style.display = "grid";
         duben2_1Video.style.display = "none";
         duben1_1Video.style.display = "none";
+        duben1_2Video.style.display = "none";
+        duben1_3Video.style.display = "none";
+        duben2_2Video.style.display = "none";
         
     })
 
@@ -539,6 +630,22 @@ window.onload = function() {
         brezen1_2Video.style.display = "none";
         brezen1_3Video.style.display = "none";
         duben1_1Video.style.display = "none";
+        duben1_2Video.style.display = "none";
+        duben1_3Video.style.display = "none";
+         duben2_2Video.style.display = "none";
+    })
+
+      duben2Druha.addEventListener("click", function(){
+        duben2_1Video.style.display = "none";
+        brezen2_1Video.style.display = "none";
+        brezen2_2Video.style.display = "none";
+        brezen1_1Video.style.display = "none";
+        brezen1_2Video.style.display = "none";
+        brezen1_3Video.style.display = "none";
+        duben1_1Video.style.display = "none";
+        duben1_2Video.style.display = "none";
+        duben1_3Video.style.display = "none";
+        duben2_2Video.style.display = "grid";
     })
 
     
